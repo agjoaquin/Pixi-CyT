@@ -1,6 +1,7 @@
 import { Application, Loader } from 'pixi.js'
 import { assets } from './assets';
 import { Scene } from './Scene';
+import {LevelBanner} from './LevelBanner';
 
 const app = new Application({
 	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
@@ -38,9 +39,13 @@ Loader.shared.add(assets)
 Loader.shared.onComplete.add(()=>{
 
 	const myScene = new Scene();
-
+	const myBanner = new LevelBanner();
+	
+	myBanner.position.set(440,60);
 	app.stage.addChild(myScene);
-
+	
+	app.stage.addChild(myBanner);
+	
 })
 
 Loader.shared.load();

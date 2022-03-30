@@ -4,6 +4,7 @@ export class SunWithGlasses extends Container {
 
     constructor(){
         super();
+
         const sun: Sprite = Sprite.from("sun");
 
 	    sun.anchor.set(0.5);

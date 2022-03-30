@@ -6,6 +6,7 @@ export class Scene extends Container{
 
     constructor(){
         super();
+		
         const sunWhitSunglasses: SunWithGlasses = new SunWithGlasses();
 
 	    sunWhitSunglasses.position.set(640,360);
